@@ -1,6 +1,6 @@
 <template>
 <StackLayout>
-    <GridLayout rows="auto, auto, *" columns="*">
+    <GridLayout rows="auto, auto, auto *" columns="*">
         <Image row="0" col="0" src="~/assets/images/map.png" />
         <DropDown row="1" col="0"
             ref="dropDownList"
@@ -26,11 +26,15 @@
             borderColor="#DBDBDB"
             borderRadius="3">
         </DropDown>
+
+        <Button text="호출하기" row="3" col="0" @tap='callShuttle' class="callBtn" />
     </GridLayout>
 </StackLayout>
 </template>
 
 <script>
+import CallShuttle from './CallShuttle';
+
 export default {
 
     data() { 
@@ -51,6 +55,10 @@ export default {
         dropDownSelectedIndexChanged() { 
             // console.log(this.selectedItem);
             let index = this.$refs.dropDownList.nativeView.selectedIndex;
+        },
+
+        callShuttle() {
+            this.$navigateTo('CallShuttle')
         }
     }
 
@@ -60,9 +68,17 @@ export default {
 <style scoped>
 .dropdown {
     font-size: 15;
-    height: 40;
-    padding: 4;
+    height: 53;
     width: 100%;
     background: #FFF;
+}
+
+.callBtn {
+    width: 100%;
+    height: 53;
+    background: #E61773;
+    color: #FFF;
+    font-size: 15;
+    font-weight: bold;
 }
 </style>

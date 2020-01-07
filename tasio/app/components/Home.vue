@@ -25,7 +25,7 @@ export default {
         return {
             currentComponent: 'SelectDestination',
 
-            componentArray: ['SelectDestination']
+            componentArray: ['SelectDestination', 'CallShuttle']
         }
     },
 
