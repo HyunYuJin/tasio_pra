@@ -31,6 +31,7 @@
                                 @selectedIndexChanged="dropDownSelectedIndexChanged" 
                                 class="dropdown">
                             </DropDown>
+                            <Label text="약 1.5km (약 20분 소요)" row="3" col="0" class="callTime" />
                             <Button text="호출하기" row="3" col="0" @tap="callShuttle" class="callBtn" />
                         </StackLayout>
                     </ScrollView>
@@ -105,13 +106,22 @@ export default {
     vertical-align: middle;
 }
 
+.callTime {
+    color: #888888;
+    font-size: 14;
+    margin-left: 61;
+}
+
 .callBtn {
-    width: 100%;
+    width: auto;
     height: 53;
     background: #E61773;
     color: #FFF;
     font-size: 15;
     font-weight: bold;
+    border-radius: 3;
+    z-index: 0;
+    margin-top: 68;
 }
 
 .pad {
