@@ -20,7 +20,7 @@
                 <StackLayout row="1" orientation="vertical">
                     <ScrollView orientation="vertical">
                         <StackLayout orientation="vertical">
-                            <DropDown row="1" col="0" 
+                            <DropDown
                                 ref="dropDownList" 
                                 selectedIndex="0" 
                                 :items="items" 
@@ -31,7 +31,7 @@
                                 borderColor="#DBDBDB" 
                                 borderRadius="3">
                             </DropDown>
-                            <DropDown row="1" col="0" 
+                            <DropDown
                                 ref="dropDownList" 
                                 selectedIndex="0" 
                                 :items="items" 
@@ -97,11 +97,6 @@ export default {
 </script>
 
 <style scoped>
-ActionBar {
-    background-color: #FFF;
-    color: #000000;
-}
-
 .message {
     vertical-align: center;
     text-align: center;
