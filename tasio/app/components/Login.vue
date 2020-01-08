@@ -6,7 +6,7 @@
           <TextField hint="아이디" class="textField" />
           <TextField hint="비밀번호" class="textField between" />
           <Button text="로그인" class="btn loginBtn" @tap="goToHome" />
-          <Label text="자동 로그인" class="saveLogin" />
+          <check-box text="자동 로그인" class="saveLogin" :checked="isChecked" @checkedChange="isChecked = $event.value" />
           
           <StackLayout orientation="horizontal" class="loginHelp">
               <Label class="helpLabel" text="아이디찾기" />
@@ -73,10 +73,12 @@ export default {
 .saveLogin {
     color: #555555;
     font-size: 14;
+    margin-left: 10;
+    margin-top: 11;
 }
 
 .loginHelp {
-    margin-top: 49;
+    margin-top: 45;
     border-top-width: 1;
     border-color: #DBDBDB;
     width: auto;
