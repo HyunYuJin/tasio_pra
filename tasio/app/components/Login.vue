@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
 .loginLogo {
-    width: 117.44;
+    width: 117;
     height: 32.61;
     margin-top: 140;
 }
@@ -78,7 +78,7 @@ export default {
 }
 
 .loginHelp {
-    margin-top: 45;
+    margin-top: 40;
     border-top-width: 1;
     border-color: #DBDBDB;
     width: auto;

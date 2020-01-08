@@ -1,10 +1,10 @@
 <template>
 <Page class="page" actionBarHidden="false">
     <ActionBar>
-        <StackLayout orientation="horizontal">
-            <!-- <Image src="~/assets/images/btn_menu.png" width="16" height="14" verticalAlignment="left" /> -->
-            <Image src="~/assets/images/logo.png" width="86" height="auto" verticalAlignment="center" />
-        </StackLayout>
+        <GridLayout row="*" columns="auto, *" orientation="horizontal">
+            <Image row="0" col="0" src="~/assets/images/btn_menu.png" width="16" height="14" verticalAlignment="left" />
+            <Image class="mgminus" row="0" col="1" src="~/assets/images/logo.png" width="86" height="auto" verticalAlignment="center" />
+        </GridLayout>
     </ActionBar>
 
     <StackLayout>
