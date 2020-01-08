@@ -6,7 +6,7 @@ import store from './store'
 
 // Add Module
 import RadListView from 'nativescript-ui-listview/vue';
-import { CheckBox } from '@nstudio/nativescript-checkbox'
+
 
 Vue.registerElement("DropDown", () => require("nativescript-drop-down/drop-down").DropDown)
 Vue.registerElement(
