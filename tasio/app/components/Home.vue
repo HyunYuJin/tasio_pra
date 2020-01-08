@@ -19,6 +19,7 @@
 
 <script>
 import SelectDestination from './SelectDestination';
+import CallShuttle from './CallShuttle';
 
 export default {
     data() {
@@ -30,7 +31,8 @@ export default {
     },
 
     components: {
-        SelectDestination
+        SelectDestination,
+        CallShuttle
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
 <StackLayout>
-    <GridLayout rows="auto, auto, auto *" columns="*">
+    <GridLayout class="pad" rows="auto, auto, auto *" columns="*">
         <Image row="0" col="0" src="~/assets/images/map.png" />
         <DropDown row="1" col="0"
             ref="dropDownList"
@@ -80,5 +80,9 @@ export default {
     color: #FFF;
     font-size: 15;
     font-weight: bold;
+}
+
+.pad {
+    padding: 0 10;
 }
 </style>
