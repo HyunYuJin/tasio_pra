@@ -1,18 +1,12 @@
 <template>
 <Page class="page" actionBarHidden="false">
     <ActionBar>
-        <StackLayout>
-            <Image src="~/assets/images/logo.png" width="100" height="auto" verticalAlignment="center" />
+        <StackLayout orientation="horizontal">
+            <!-- <Image src="~/assets/images/btn_menu.png" width="16" height="14" verticalAlignment="left" /> -->
+            <Image src="~/assets/images/logo.png" width="86" height="auto" verticalAlignment="center" />
         </StackLayout>
-        <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
     </ActionBar>
     <StackLayout>
-        <!-- <component 
-            v-bind:key="component" 
-            v-for="component in componentsArray"
-            v-show="component === currentComponent" 
-            :is="component" 
-            row="0" col="0" /> -->
             <GridLayout rows="auto, *" verticalAlignment="top">
                 <Image row="0" src="~/assets/images/map.png" />
 
@@ -26,10 +20,8 @@
                                 :items="items" 
                                 v-model="selectedItem" 
                                 @selectedIndexChanged="dropDownSelectedIndexChanged" 
-                                class="dropdown" 
-                                borderWidth="1" 
-                                borderColor="#DBDBDB" 
-                                borderRadius="3">
+                                class="dropdown">
+                                <Label text="출발지: " />
                             </DropDown>
                             <DropDown
                                 ref="dropDownList" 
@@ -37,10 +29,7 @@
                                 :items="items" 
                                 v-model="selectedItem" 
                                 @selectedIndexChanged="dropDownSelectedIndexChanged" 
-                                class="dropdown" 
-                                borderWidth="1" 
-                                borderColor="#DBDBDB" 
-                                borderRadius="3">
+                                class="dropdown">
                             </DropDown>
                             <Button text="호출하기" row="3" col="0" @tap="callShuttle" class="callBtn" />
                         </StackLayout>
@@ -106,9 +95,14 @@ export default {
 
 .dropdown {
     font-size: 15;
+    width: auto;
     height: 53;
-    width: 100%;
+    margin: 10;
     background: #FFF;
+    border-width: 1;
+    border-color: #DBDBDB;
+    border-radius: 3;
+    vertical-align: middle;
 }
 
 .callBtn {

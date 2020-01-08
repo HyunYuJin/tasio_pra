@@ -1,19 +1,19 @@
 <template>
 <Page class="page" actionBarHidden="false">
     <ActionBar>
-        <StackLayout>
-            <Image src="~/assets/images/logo.png" width="100" height="auto" verticalAlignment="center" />
+        <StackLayout orientation="horizontal">
+            <!-- <Image src="~/assets/images/btn_menu.png" width="16" height="14" verticalAlignment="left" /> -->
+            <Image src="~/assets/images/logo.png" width="86" height="auto" verticalAlignment="center" />
         </StackLayout>
-        <NavigationButton text="Back" android.systemIcon="ic_menu_back"></NavigationButton>
     </ActionBar>
 
     <StackLayout>
         <ScrollView orientation="vertical">
             <GridLayout rows="auto, *, auto" verticalAlignment="top">
-                <Image src="~/assets/images/map2.png" row="0" />
+                <Image width="100%" height="450" src="~/assets/images/map2.png" row="0" col="auto" />
                 <StackLayout row="1">
                     <GridLayout class="destWrap" rows="*" columns="auto, auto">
-                        <Image class="iconmap" src="~/assets/images/Vector.png" col="0" width="22" height="22" />
+                        <Image class="iconmap" src="~/assets/images/icon_location.png" col="0" width="22" height="22" />
                         <Label class="destName" text="도착지: 유람선 선착장" col="1" />
                     </GridLayout>
                     <GridLayout rows="*" columns="auto, *, auto" backgroundColor="#FFF">
