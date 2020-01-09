@@ -15,14 +15,18 @@
             for="item of items">
             
             <v-template if="$odd" name="title-odd">
-                <StackLayout class="accordionTitle">
-                    <Label :text="item.title" />
+                <StackLayout orientation="horizontal" class="accordionTitle">
+                    <Label :text="item.title" horizontalAlignment="left" width="60%" />
+                    <Label text="" horizontalAlignment="center" width="30%" />
+                    <Image src="~/assets/images/down.png" width="11.61" horizontalAlignment="right" />
                 </StackLayout>
             </v-template>
 
             <v-template if="$even" name="title-even">
-                <StackLayout class="accordionTitle">
-                    <Label :text="item.title" />
+                <StackLayout orientation="horizontal" class="accordionTitle">
+                    <Label :text="item.title" horizontalAlignment="left" width="60%" />
+                    <Label text="" horizontalAlignment="center" width="30%" />
+                    <Image src="~/assets/images/down.png" width="11.61" horizontalAlignment="right" />
                 </StackLayout>
             </v-template>
 
