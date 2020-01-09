@@ -1,12 +1,15 @@
 import Vue from 'nativescript-vue'
 // import Home from './components/Home'
-import Login from './components/Login'
+// import Login from './components/Login'
+import AgreeList from './components/AgreeList';
 
 import store from './store'
 
 // Add Module
 import RadListView from 'nativescript-ui-listview/vue';
+import Pager from 'nativescript-accordion/vue'
 
+Vue.use(Pager)
 
 Vue.registerElement("DropDown", () => require("nativescript-drop-down/drop-down").DropDown)
 Vue.registerElement(
@@ -28,5 +31,5 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 new Vue({
   store,
-  render: h => h('frame', [h(Login)])
+  render: h => h('frame', [h(AgreeList)])
 }).$start()
