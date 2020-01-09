@@ -2,7 +2,7 @@
   <Page class="page" actionBarHidden="true">
       <StackLayout orientation="vertical">
           <Image src="~/assets/images/logo.png" class="loginLogo" />
-          <Label text="안녕하세요 타시오 입니다." class="loginIntro" />
+          <Label text="안녕하세요 타시오 입니다." class="intro" />
           <TextField hint="아이디" class="textField" />
           <TextField hint="비밀번호" class="textField between" />
           <Button text="로그인" class="btn loginBtn" @tap="goToHome" />
@@ -35,19 +35,19 @@ export default {
 </script>
 
 <style scoped>
-.loginLogo {
-    width: 117;
-    height: 32.61;
-    margin-top: 140;
-}
-
-.loginIntro {
+.intro {
     color: #555;
     font-size: 18;
     vertical-align: top;
     text-align: center;
     font-weight: bold;
     margin-top: 15.39;
+}
+
+.loginLogo {
+    width: 117;
+    height: 32.61;
+    margin-top: 140;
 }
 
 .textField {
