@@ -11,7 +11,7 @@
           <StackLayout orientation="horizontal" class="loginHelp">
               <Label class="helpLabel" text="아이디찾기" />
               <Label class="helpLabel" text="비밀번호찾기" />
-              <Label class="helpLabel" text="회원가입" />
+              <Label class="helpLabel" text="회원가입" @tap="goToJoinCheck" />
           </StackLayout>
       </StackLayout>
   </Page>
@@ -19,11 +19,16 @@
 
 <script>
 import Home from './Home'
+import JoinAgree from './JoinAgree'
 
 export default {
     methods: {
         goToHome() {
             this.$navigateTo(Home)
+        },
+
+        goToJoinCheck() {
+            this.$navigateTo(JoinAgree)
         }
     },
 

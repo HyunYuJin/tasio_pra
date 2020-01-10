@@ -56,7 +56,7 @@
                 <Label class="line highlight" text="접근 권한 변경" row="0" col="1" />
             </GridLayout>
             <Label class="line" text="휴대폰 설정 > 앱 > 타시오" />
-            <Button text="확인" class="btn mar" />
+            <Button @tap="goToLogin" text="확인" class="btn mar" />
         </StackLayout>
         
     </GridLayout>
@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import Login from './Login'
+
 export default {
     data() {
         return {    
@@ -106,6 +108,16 @@ export default {
                 }
             ]
         }
+    },
+
+    methods: {
+        goToLogin() {
+            this.$navigateTo(Login)
+        }
+    },
+
+    components: {
+        Login
     }
 }
 </script>
