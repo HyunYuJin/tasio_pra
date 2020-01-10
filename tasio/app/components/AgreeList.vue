@@ -56,7 +56,7 @@
                 <Label class="line highlight" text="접근 권한 변경" row="0" col="1" />
             </GridLayout>
             <Label class="line" text="휴대폰 설정 > 앱 > 타시오" />
-            <Button @tap="goToLogin" text="확인" class="btn mar" />
+            <Button @tap="goToPhone" text="확인" class="btn mar" />
         </StackLayout>
         
     </GridLayout>
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import Login from './Login'
+import PhoneCert from './PhoneCert'
 
 export default {
     data() {
@@ -111,13 +111,13 @@ export default {
     },
 
     methods: {
-        goToLogin() {
-            this.$navigateTo(Login)
+        goToPhone() {
+            this.$navigateTo(PhoneCert)
         }
     },
 
     components: {
-        Login
+        PhoneCert
     }
 }
 </script>
