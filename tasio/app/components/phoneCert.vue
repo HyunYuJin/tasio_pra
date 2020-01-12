@@ -1,21 +1,26 @@
 <template>
   <Page class="page" actionBarHidden="true">
-      <GridLayout rows="60, 40, auto, *" columns="*">
-        <Label class="certTitle" row="0" text="휴대폰 번호 인증" />
-        <Label class="certContent" row="1" text="연락 받을 수 있는 휴대폰 번호를 입력하세요. 서비스 이용에 반드시 필요합니다." />
-        <GridLayout class="certPhone" row="2" rows="53" columns="*, *, *" >
-            <DropDown width="20%" col="0"
-                ref="dropDownList" 
-                selectedIndex="0" 
-                :items="items" 
-                v-model="selectedItem" 
-                @selectedYears="dropDownSelectedYears" 
-            >
-            </DropDown>
-            <TextField width="50%" col="1" text="01023456789" />
-            <Button class="btn" width="30%" col="2" text="보내기" />
-        </GridLayout>
-        <Button row="3" text="다음" class="btn" />
+      <GridLayout width="100%" height="100%" rows="auto, 0, auto, *" columns="*">
+          <StackLayout height="100%" row="0" col="0">
+              <Label text="휴대폰 번호 인증" class="certTitle" />
+              <Label text="연락 받을 수 있는 휴대폰 번호를 입력하세요. 서비스 이용에 반드시 필요합니다." class="certContent" />
+
+              <GridLayout height="70%" rows="auto, auto" columns="auto, * auto" class="certPhone">
+                  <DropDown row="0" col="0"
+                    ref="dropDownList" 
+                    selectedIndex="0" 
+                    :items="items" 
+                    v-model="selectedItem" 
+                    @selectedYears="dropDownSelectedYears" 
+                  ></DropDown>
+                  <TextField row="0" col="1" hint="01023456789" />
+                  <Button row="0" col="2" text="보내기" class="btn" />
+
+                  <TextField row="1" col="0" colSpan="2" hint="인증 번호 입력" />
+                  <Label row="1" col="2" text="02:37" />
+              </GridLayout>
+              <Button row="2" col="0" text="다음" class="btn" />
+          </StackLayout>
       </GridLayout>
   </Page>
 </template>
@@ -48,18 +53,20 @@ export default {
     font-weight: bold;
     vertical-align: middle;
     text-align: center;
-    padding-top: 22;
+    margin-top: 22
 }
 
 .certContent {
     color: #555;
     font-size: 14;
     text-align: center;
-    padding-top: 37;
+    margin-top: 37;
 }
 
 .certPhone {
-    padding-top: 73;
+    margin-top: 73;
+    margin-left: 17;
+    margin-right: 17;
     border-width: 1;
     border-color: #DBDBDB;
     vertical-align: middle;
