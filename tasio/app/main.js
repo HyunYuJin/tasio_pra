@@ -1,7 +1,8 @@
 import Vue from 'nativescript-vue'
 // import Home from './components/Home'
 // import Login from './components/Login'
-import AgreeList from './components/AgreeList';
+// import AgreeList from './components/AgreeList';
+import App from './components/App'
 
 import store from './store'
 
@@ -31,5 +32,5 @@ Vue.config.silent = (TNS_ENV === 'production')
 
 new Vue({
   store,
-  render: h => h('frame', [h(AgreeList)])
+  render: h => h('frame', [h(App)])
 }).$start()

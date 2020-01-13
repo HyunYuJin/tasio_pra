@@ -1,53 +1,24 @@
 <template>
-<Page class="page" actionBarHidden="false">
-    <ActionBar>
-        <GridLayout row="*" columns="auto, *" orientation="horizontal">
-            <Image row="0" col="0" src="~/assets/images/btn_menu.png" width="16" height="14" verticalAlignment="left" />
-            <Image class="mgminus" row="0" col="1" src="~/assets/images/logo.png" width="86" height="auto" verticalAlignment="center" />
-        </GridLayout>
-    </ActionBar>
-    <StackLayout>
-            <GridLayout rows="auto, *" verticalAlignment="top">
-                <Image row="0" src="~/assets/images/map.png" />
+<StackLayout id="home">
+    <GridLayout rows="auto, *" verticalAlignment="top">
+        <Image row="0" src="~/assets/images/map.png" />
 
-                <!-- Make overflow scroll-Y -->
-                <StackLayout row="1" orientation="vertical">
-                    <ScrollView orientation="vertical">
-                        <StackLayout orientation="vertical">
-                            <DropDown
-                                ref="dropDownList" 
-                                selectedIndex="0" 
-                                :items="items" 
-                                v-model="selectedItem" 
-                                @selectedIndexChanged="dropDownSelectedIndexChanged" 
-                                class="dropdown">
-                                <Label text="출발지: " />
-                            </DropDown>
-                            <DropDown
-                                ref="dropDownList" 
-                                selectedIndex="0" 
-                                :items="items" 
-                                v-model="selectedItem" 
-                                @selectedIndexChanged="dropDownSelectedIndexChanged" 
-                                class="dropdown">
-                            </DropDown>
-                            <Label text="약 1.5km (약 20분 소요)" row="3" col="0" class="callTime" />
-                            <Button text="호출하기" row="3" col="0" @tap="callShuttle" class="btn callBtn" />
-                        </StackLayout>
-                    </ScrollView>
+        <!-- Make overflow scroll-Y -->
+        <StackLayout row="1" orientation="vertical">
+            <!-- <ScrollView orientation="vertical"> -->
+                <StackLayout orientation="vertical">
+                    <DropDown ref="dropDownList" selectedIndex="0" :items="items" v-model="selectedItem" @selectedIndexChanged="dropDownSelectedIndexChanged" class="dropdown">
+                        <Label text="출발지: " />
+                    </DropDown>
+                    <DropDown ref="dropDownList" selectedIndex="0" :items="items" v-model="selectedItem" @selectedIndexChanged="dropDownSelectedIndexChanged" class="dropdown">
+                    </DropDown>
+                    <Label text="약 1.5km (약 20분 소요)" row="3" col="0" class="callTime" />
+                    <Button text="호출하기" row="3" col="0" @tap="callShuttle" class="btn callBtn" />
                 </StackLayout>
-            </GridLayout>
-        <!-- <RadListView ref="listView" for="item in itemList"> -->
-            <!-- The v-template component is used internally by the ListView component to iterate over its list items.  -->
-            <!-- <v-template> -->
-                <!-- <StackLayout orientation="vertical">
-                    <Label text="&copy; Springcloud Ltd,." />
-                    <Label text="경기도 성남시 수정구 창업로 42, 경기기업성장센터 523, 524" />
-                </StackLayout> -->
-            <!-- </v-template>
-        </RadListView> -->
-    </StackLayout>
-</Page>
+            <!-- </ScrollView> -->
+        </StackLayout>
+    </GridLayout>
+</StackLayout>
 </template>
 
 <script>
